@@ -1,0 +1,249 @@
+:root {
+  --tongji-blue: #0046b8;
+  --soft-blue: #eaf1ff;
+  --text: #1d2733;
+  --muted: #5d6b7c;
+  --rule: #d9e2ef;
+  --link: #0046b8;
+  --page: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: #f6f8fb;
+  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif;
+  line-height: 1.78;
+}
+
+.site-header {
+  background: var(--page);
+  border-bottom: 1px solid var(--rule);
+}
+
+.top-line,
+.bottom-line {
+  height: 8px;
+  background: var(--tongji-blue);
+}
+
+.header-inner {
+  width: min(1120px, calc(100% - 48px));
+  min-height: 122px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.group-name {
+  margin: 0 0 10px;
+  color: var(--tongji-blue);
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.1;
+}
+
+.school-name {
+  display: inline-block;
+  min-width: min(520px, 100%);
+  margin: 0;
+  padding: 8px 28px;
+  color: #fff;
+  background: #5d79d8;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.university {
+  color: var(--tongji-blue);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.university span {
+  display: block;
+  font-size: clamp(34px, 4vw, 54px);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.university small {
+  display: block;
+  margin-top: 4px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(16px, 2vw, 25px);
+  font-weight: 700;
+}
+
+.page {
+  width: min(1120px, calc(100% - 48px));
+  margin: 34px auto 56px;
+  padding: 38px 42px 48px;
+  background: var(--page);
+  border: 1px solid var(--rule);
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  align-items: center;
+  gap: 44px;
+  padding-bottom: 34px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.profile-text h1 {
+  margin: 0 0 18px;
+  color: var(--tongji-blue);
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+.profile-text p {
+  margin: 6px 0;
+  font-size: 22px;
+  line-height: 1.55;
+}
+
+.portrait {
+  width: 220px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 1px solid #c8d4e5;
+}
+
+.section {
+  padding-top: 34px;
+}
+
+.section h2 {
+  margin: 0 0 16px;
+  padding-left: 12px;
+  border-left: 5px solid var(--tongji-blue);
+  color: #000;
+  font-size: 25px;
+  line-height: 1.25;
+}
+
+.section h2 span {
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.section p {
+  margin: 0 0 16px;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.research-list,
+.publication-list {
+  margin: 0;
+  padding-left: 28px;
+}
+
+.research-list li {
+  margin: 8px 0;
+  font-size: 19px;
+}
+
+.join-note {
+  margin-top: 20px !important;
+  padding: 16px 18px;
+  background: var(--soft-blue);
+  border-left: 5px solid var(--tongji-blue);
+  font-weight: 800;
+}
+
+.publication-list li {
+  margin: 0 0 18px;
+  padding-left: 4px;
+  font-size: 16px;
+  line-height: 1.68;
+}
+
+.publication-list a {
+  color: var(--link);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.publication-list a:hover {
+  text-decoration: underline;
+}
+
+strong {
+  font-weight: 800;
+}
+
+.footer {
+  width: min(1120px, calc(100% - 48px));
+  margin: -34px auto 34px;
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .header-inner {
+    width: min(100% - 28px, 1120px);
+    min-height: 0;
+    padding: 22px 0;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .school-name {
+    min-width: 0;
+    padding: 8px 14px;
+    font-size: 18px;
+  }
+
+  .university {
+    text-align: left;
+  }
+
+  .page {
+    width: min(100% - 28px, 1120px);
+    margin-top: 20px;
+    padding: 24px 18px 34px;
+  }
+
+  .profile {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .portrait {
+    width: min(220px, 100%);
+    justify-self: start;
+  }
+
+  .profile-text p,
+  .section p,
+  .research-list li {
+    font-size: 17px;
+  }
+
+  .publication-list li {
+    font-size: 15px;
+  }
+
+  .footer {
+    width: min(100% - 28px, 1120px);
+  }
+}
